@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<script type="text/javascript">
+  /*
+  栈
+
+  pop()
+  移除数组末尾元素
+  无参数
+  返回值：为移除的元素
+
+  push()
+  【格式】数组.push(元素...)
+  功能：给数组末尾添加元素
+  参数：我们要添加的元素，参数个数随意
+  返回值：添加元素以后，数组的长度
+
+队列
+
+  push()
+  【格式】数组.push(元素...)
+  功能：给数组末尾添加元素
+  参数：我们要添加的元素，参数个数随意
+  返回值：添加元素以后，数组的长度
+
+  shift()
+  【格式】数组.shift()
+  功能：取出数组的头部元素
+  返回值：取下的元素
+
+  unshift()
+  【格式】数组.unshift(元素...)
+  功能：从数组头部插入元素*/
+
+  var arr = ["1", "2", "3"];
+  var res = arr.push("4", "5");
+  alert(res); //5
+  var res1 = arr.pop();
+  alert(res1);
+  alert(arr);
+  var res2 = arr.shift();
+  document.write(res2); //1
+  arr.unshift("-1", "0");
+</script>
+
+<body>
+
+</body>
+
+</html>

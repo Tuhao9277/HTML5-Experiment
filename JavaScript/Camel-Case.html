@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>将一个字符串修改为驼峰命名</p>
+	<script>
+		function camelBack(arr) {
+			var str = arr.split("-"),	//将传入的字符串拆分成数组
+				newStr = str[0];		//保存修改后数组首元素（字符串）
+			for (var i = 1; i < str.length; i++) {
+
+				newStr += str[i].charAt(0).toUpperCase() + str[i].substr(1);
+				//连接上所有元素，
+				//修改从第二个字符串开始的首字母为大写，修改后仅保留首字母
+				//首字母加上剩余字符串
+			}
+			return newStr;
+		}
+		var afterCamel = camelBack("get-element-id");
+		document.write(afterCamel);
+	</script>
+</body>
+</html>

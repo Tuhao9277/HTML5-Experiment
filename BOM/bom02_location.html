@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>location路径</title>
+	</head>
+	<script type="text/javascript">
+		window.onload = function(){
+			var a = window.location;
+			var b = window.document.location;
+			alert(a==b); //true
+		}
+		/*
+		location  地址栏上的输入框
+		【注】 它提供了与当前窗口中加载文档的有关信息
+		
+		location 中的属性
+		
+		url 统一资源定位符(快递包上的地址)
+		
+		*/
+	   
+	   /*
+	   锚点： #1	实现页内跳转 id
+	   lsdc.html#1
+	   
+	   */
+	   location.hash; //获取锚点
+	   location.hash = "#3";
+	   
+	   /*
+		host 端口号  浏览器的端口号 默认8080
+		IP 通过IP地址在全球范围内，找到本机所使用的网络地址
+		端口：使用网络的各个软件，占用不同的端口作为唯一标识，其数据相互不受干扰
+	  IP+端口号 就能定位本机正在使用网络的软件
+	   */
+	  /*
+		hostname 主机名  域名/IP
+		域名就是ip的别名
+	  */
+	  location.hostname;
+	  location.href = location;
+	  
+	  // port 端口号
+	  location.port;
+	  /*
+		Protocol 协议
+		
+		http：网络协议
+		file：本地文件
+	  */
+	 location.protocol;
+	 /*
+
+	 */
+	 //location.search;
+	 window.onload = function(){
+		 document.onclick = function(){
+			 location.search = "?xxx=2&as=19";
+		 }
+	 }
+	 /*
+		 url统一资源定位符
+		 protocol(协议):host(主机名):port(端口号):/pathname(路径)?查询字符串(search)
+		 
+	 */
+	</script>
+	<body>
+	</body>
+</html>

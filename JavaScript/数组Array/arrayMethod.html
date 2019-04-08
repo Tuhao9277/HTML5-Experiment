@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+</head>
+<script type="text/javascript">
+  /*concat();
+  【格式】数组1.concat(数组2);
+  【功能】将两个数组合并成一个新数组，原数组1不会改变
+  返回值：合并好的新数组
+  参数：需要合并的数组*/
+
+  var arr1 = ["啊",
+    "啊",
+    "啊"
+  ];
+  var arr2 = ["吧", "吧"];
+  var arr3 = arr1.concat(arr2);
+  //  alert(arr3);
+  //  alert(arr1);
+  /*
+  slice()
+  【格式】数组.slice(start,end);
+  功能：基于当前数组获取指定区域元素并创建一个新数组
+  参数：前闭后开
+  返回值：指定区域元素生成的新数组
+  */
+  /*
+    splice 可以完成删除，插入，替换操作
+    【格式】arr4.splice(start,DeleteLength,el)
+    参数：参数1 截取的开始下标
+          参数2 截取的长度
+          参数3 插入的元素
+    返回值：被删除元素*/
+
+
+  var arr4 = ["red", "blue", "orange"];
+  var result = arr4.splice(1, 1);
+  //alert(result);
+  arr4.splice(1, 0, "element");
+  //替换：先删除，再插入
+  arr4.splice(1, 1, "yellow");
+  //alert("")
+
+  /*
+    join()
+    【格式】数组.join(拼接符)
+    功能：使用拼接符将数组中元素拼接成字符串
+    参数：拼接符
+    返回：拼接好的字符串
+
+  */
+  var arr5 = ["red", "blue", "orange"];
+  var res = arr5.join("-");
+  console.log(res);
+</script>
+
+<body>
+
+</body>
+
+</html>

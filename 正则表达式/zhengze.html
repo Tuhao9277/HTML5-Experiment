@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+/*
+定义方法*/
+    //1.字面量的方式
+    var reg = /abv/;
+    //2.构造函数
+    var reg = new RegExp("abv")
+    //test方法用来检测正则字符串中是否含有符合规则的子串
+    //有返回true，否则返回false
+    var str = "ab";
+    var flag = reg.test(str);
+    //console.log(flag);
+    /*修饰符
+        g 全局匹配 
+    */
+
+    var  reg = /abc/g; 
+    var str = "abcabc";
+    var res =  str.match(reg); //match方法为字符串的方法
+    //console.log(res); //返回数组，两个元素 abc  abc
+                    //若不加g ，则返回abc数组，包含索引值，长度，输入等信息
+    
+    /* i 忽略大小写*/
+    var  reg = /abc/gi; 
+    var str = "defABCABC";
+    var res =  str.match(reg); //match方法为字符串的方法
+    //console.log(res); //返回数组，两个元素 ABC  ABC
+    /*正则与split,replace结合*/
+    var reg = /tmd/gi;
+    var str = "abc TMD tmdabc"
+    var ress = str.replace(reg,"*");
+    //console.log(ress);
+    //exec方法：正则表达式方法，将匹配成功的内容放到数组里，如果没有匹配成功返回null
+    var reg = /good/g; 
+    var str = "good good skr"
+    console.log(reg.exec(str)); //index 0
+    console.log(reg.exec(str)); //index 5
+</script>
+<body>
+    
+</body>
+</html>

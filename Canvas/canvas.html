@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas</title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+	canvas{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin:  auto;
+		display: block;
+		background: #abcdef;
+	}
+</style>
+<script type="text/javascript">
+	window.onload = function () {
+		var canvas = document.getElementById('canvas');
+		var context = canvas.getContext('2d');
+
+		context.moveTo(100,100);
+		context.lineTo(400,200);
+		context.stroke();
+	}
+</script>
+<body>
+	<canvas id="canvas" width="640" height="480"></canvas>
+</body>
+</html>

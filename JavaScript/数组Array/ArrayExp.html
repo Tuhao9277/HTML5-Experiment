@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<script>
+	/*
+	数组的长度
+	arr.length 可访问，即元素的个数
+	【注】length属性，不是只读的，是可以设置的。
+	*/
+	var nums = [4, 5, 2, 1, 56];
+	var pos = nums.indexOf();
+
+	function searchIndexOf(arr, value) {
+		for (var i = 0; i < arr.length; i++) {
+			if (arr[i] === value) {
+				return i;
+			}
+
+		}
+		return -1;
+	}
+
+	function traverseArray(arr) {
+		// for in 遍历	效率比for循环高，不需要条件判断
+		for (var i in arr) {
+			document.write(arr[i] + " ");
+		}
+	}
+
+	var index = searchIndexOf(nums, 1);
+	document.write(index);
+</script>
+
+<body>
+
+</body>
+
+</html>

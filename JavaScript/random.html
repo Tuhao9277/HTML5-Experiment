@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>生成随机数</p>
+	<script>
+		function getRandom(n,m) {
+			var choise = m-n+1;
+			return  Math.floor(Math.random()*choise+n);
+		}
+		var num1 = getRandom(0,100);
+		document.write(num1);
+	</script>
+</body>
+</html>

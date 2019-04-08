@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script type="text/javascript">
+		/*
+		BOM（Browser Object Model） 浏览器对象模型
+		整个浏览器就是一个BOM
+	   1、window 对象
+	   浏览器上打开的一个窗口
+	   window对象是全局对象，所有的表达式都在当前的环境中计算。
+	
+	window下的函数		【注】window下的函数都可以省略window直接调用
+		对话框。
+		1 alert();
+			window.alert();
+		2 confirm();
+			【功能】带有确定和取消按钮的警告框，参数为显示内容
+			【返回值】 确定：true 取消：false
+		3 prompt(param1,param2);
+			【功能】带输入的提示框
+			【参数】param1：显示的内容
+					param2：默认值
+			【返回值】
+				确定 返回输入值
+				取消 返回null
+		open()方法
+		window.open()
+		open("url","key","width=,height=,top= ,left=")
+		1.要加载的url
+		2.窗口的名称或窗口的目标
+		3.一串具有特殊意义的字符串
+		key缺省时多次点击多次打开新窗口，
+		否则只在已经打开key的url的窗口里加载
+		
+		*/
+	   window.onload = function(){
+		   var oBtn = document.getElementById("btn");
+			oBtn.onclick = function(){
+				open("http://www.baidu.com");
+				open("http://www.baidu.com","key");
+				  /*
+						opener 打开当前窗口的父窗口的window对象
+				*/
+			   open("sub.html","subWindow")
+				//在sub.html里设置 opener.document.write; 
+				 //将在父窗口上执行相应的事件
+			}
+	   }
+	   
+	 
+	 
+	   
+	</script>
+	<body>
+		<input type="button" value="按钮" id="btn"/>
+	</body>
+</html>

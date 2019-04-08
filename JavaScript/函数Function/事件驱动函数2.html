@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Document</title>
+</head>
+<script type="text/javascript">
+  window.onload = function() {
+    var oBtn = document.getElementById("btn");
+    var oTxt = document.getElementById("text");
+    oBtn.onclick() = function() {
+
+      //oTxt.value 是字符串
+
+      //清空文本中的内容
+      oTxt.value = "";
+
+      // 输出文本中的内容
+      alert(oTxt.value);
+      // 修改文本中内容
+      oTxt.value = "修改后的内容"
+    }
+
+  }
+</script>
+
+<body>
+  <input type="text" name="" id="text" value="默认的文字" />
+  <input type="button" value="清空" id="btn" />
+</body>
+
+</html>

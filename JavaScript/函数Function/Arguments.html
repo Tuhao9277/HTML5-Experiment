@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>参数列表不确定，用Arguments</title>
+</head>
+
+<body>
+	<script>
+		/*
+	计算所有传入参数的和，具体传入参数个数不确定
+	【注】arguments
+	【注】 在每一个函数内，都有一个内置的数组，是一个变量
+		arguments可以存储当前函数传入的所有参数，且保存传入参数的顺序。
+	【注】通过下标访问arguments里的数据。
+	【注】下标配合循环使用
+
+*/
+
+		//测试传入参数的个数
+		function add() {
+			//console.log(arguments[0]);
+			document.write(arguments.length);
+		}
+		add(1, 2);
+
+
+		//求任意个数的平均值
+		function getAvg(num1, num2) {
+			var sum = 0,
+				len = arguments.length;
+			for (var i = 0; i < len; i++)
+				sum += arguments[i];
+			document.write(sum);
+			return sum / len;
+		}
+		var avg = getAvg(5, 6, 9, 8, 7);
+		document.write("avg:" + avg);
+	</script>
+</body>
+
+</html>

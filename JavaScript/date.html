@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>输出n天后的今天是星期几</p>
+	<script>
+		var weeks = ["1","2","3","4","5","6","7"];
+		var date = new Date(),
+			year = date.getFullYear(),
+			month = date.getMonth(),
+			today = date.getDate();
+			//time = "year:"+year+"month:"+month+"day:"+day+"week:"+week;
+		//document.write(time);
+		//第一种做法
+		//date.setDate(date.getDate()+100);
+		//document.write(date.getDay());
+		//第二种做法
+		var temp = new Date(year,month,today+1);
+		document.write(temp.getFullYear()+"-"+(temp.getMonth()+1)+"-"+temp.getDate()+"-"+weeks[temp.getDay()-1]);
+	</script>
+</body>
+</html>

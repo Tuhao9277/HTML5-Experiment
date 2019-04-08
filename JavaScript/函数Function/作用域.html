@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title> </title>
+</head>
+<script type="text/javascript">
+  /*
+      全局作用域
+          全局作用域声明的变量  全局变量
+      局部作用域 函数
+          局部作用域声明的变量  局部变量
+      局部变量的声明周期和生效的范围，都是声明
+      该变量的函数区域，当函数调用完成以后，就直接销毁。
+
+      如果全局作用域和局部作用域重名，采取就近原则
+      里哪个作用域近，就存在于哪个作用域
+  */
+  var a = 10;
+
+  function sum() {
+    a = 5;
+  }
+  alert(a); //10
+  sum();
+  alert(a); //5
+
+  var a = 10;
+
+  function sum2() {
+    //function里定义的变量只存在在function空间里
+    //调用完成后销毁
+    var a = 3;
+    alert(a);
+  }
+  alert(a); //10
+  sum2(); //3
+  alert(a); //10
+</script>
+
+<body>
+</body>
+
+</html>

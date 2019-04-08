@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script type="text/javascript">
+/*
+    . 除了换行符之外的所有单个字符
+*/
+    var reg = /g..gle/gi;
+    var str = "googleg22gle";
+   // console.log(reg.test(str)); //true
+   // console.log(str.match(reg)); //google g22gle 数组
+    /*
+            * 重复多次匹配,匹配任意次(0~n)
+    */
+    var reg = /g*gle/gi;
+    var str = "gggleg22gle";
+   // console.log(reg.test(str)); //true
+    //.log(str.match(reg)); //gggle gle
+    /*
+        至少又一次重复匹配
+    */
+
+    var reg = /g+gle/g;
+    var str = "gglegeggle";
+    //console.log(reg.test(str)); //true
+    //console.log(str.match(reg)); //ggle ggle
+
+    /*
+    0次或1次匹配
+    */
+    var reg = /g?gle/g;
+    var str = "g8glegeggle";
+   // console.log(reg.test(str)); //true
+   // console.log(str.match(reg)); //gle ggle 
+
+    /*字符串中数字,字母的范围*/
+    var reg = /[0-9a-zA-Z]/g;
+    var str = "1as";
+    //console.log(reg.test(str)); //true
+
+    /*字符串中数字,字母下划线的范围
+     w+  等效于[0-9a-zA-Z_]
+     W+  表示非值
+    */
+    var reg = /\w+/g;  
+    var str = "1as";
+    console.log(reg.test(str)); //true
+    //  \d 表示数字[0-9]
+    //  \D 表示非数字
+    var reg = /\d+/g;  
+    var str = "1as";
+    console.log(reg.test(str)); //true
+    //  \s 匹配空格 
+    var reg = /\s+/g;  
+    var str = "1a s";
+    console.log(reg.test(str)); //true
+    var str =  str.replace(reg,""); //去括号
+    console.log(str);
+    //  {m,n}匹配中间字符个数，最少m ，最多n
+    var reg = /go{2,4}gle/g;  
+    var str = "gooogle";
+    console.log(reg.test(str)); //true
+    console.log(str.match(reg)); //google  
+    //  /^匹配开始 $/
+    var reg = /^g.+e$/g;  
+    var str = "gooogle";
+    console.log(reg.test(str)); //true
+    //  | 或
+    var reg = /google|baidu/g;  
+    var str = "www.baidu.com";
+    console.log(reg.test(str)); //true
+
+    // ()分组 将内容作为一个整体进行匹配
+    var reg = /(g.+gle){4,6}/gi;
+    var str = "googlegooglegooglegooglegoogle";
+    console.log(reg.test(str)); //true
+    console.log(RegExp.$1);
+    /*
+        $1,$2 交换元素
+    */
+    var reg = /(.*)\s(.*)/;
+    var str = "as fs";
+    console.log(str.replace(reg,"$2 $1"));
+
+
+</script>
+<body>
+    
+</body>
+</html>

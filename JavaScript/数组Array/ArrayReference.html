@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<script type="text/javascript">
+  /*
+  声明在当前函数中的变量和当前函数的形参，作用域都限制在该函数内，
+  函数调用结束以后，这些变量和形参就会被释放。
+
+
+  */
+
+  var a = 10;
+
+  function show(a) {
+    a = 5;
+    alert(a);
+  }
+  alert(a); //10
+  show(a); //5
+  alert(a); //10
+
+  /*
+  数组： 复合数据类型/引用数据类型
+  【注】所有的复合数据类型都不直接存储在函数中，而是存储在堆段。
+  【注】函数运行的内存空间是预先分配好的，一旦分配好空间，就不能进行改变
+  【注】在堆段，内存可以自由分配。
+    函数通过地址找到堆区的数组，修改数组元素，在执行完成后销毁。
+
+  */
+
+  var arr = [10, 20];
+
+  function stage() {
+    arr.push(30, 40);
+    alert(a);
+  }
+  alert(arr); //10 20
+  show(arr); //10 20 30 40
+  alert(arr); //10 20 30 40
+</script>
+
+<body>
+
+</body>
+
+</html>

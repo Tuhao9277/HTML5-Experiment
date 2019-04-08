@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>判断闰平年</title>
+</head>
+<script type="text/javascript">
+  /*
+  1.判断是否为闰年
+  @Condition :年份可以被400整除
+            或者被4整除且不是100的整数
+  @param：年份
+  @Return：Boolean
+  */
+  function isLeapYear(year) {
+    if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  //alert(isLeapYear(2019));
+
+  /*
+  1.判断是否为素数
+  @Condition :只能被1和他本身所整除
+  @param：数字
+  @Return：Boolean
+  */
+  function isPrimeNumber(num) {
+    for (var i = 2; i < num; i++) {
+      if (num % i == 0) {
+        return false;
+      }
+    }
+    return true;
+  }
+  alert(isPrimeNumber(5));
+</script>
+
+<body>
+
+</body>
+
+</html>

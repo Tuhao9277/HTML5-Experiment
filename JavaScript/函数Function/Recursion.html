@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>递归调用</title>
+</head>
+<script type="text/javascript">
+  /*
+  递归会在短时间内使内存剧增
+*/
+
+  function sum(n) {
+    if (n == 1) {
+      return 1;
+    } else {
+      return n + sum(n - 1);
+    }
+  }
+
+  alert(sum(100));
+</script>
+
+<body>
+</body>
+
+</html>

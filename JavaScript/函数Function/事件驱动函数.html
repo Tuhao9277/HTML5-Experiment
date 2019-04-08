@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>事件驱动函数</title>
+</head>
+<script type="text/javascript">
+  /*
+  什么是事件驱动函数
+ 在与页面交互过程中所调用的函数，该函数称之为事件驱动函数
+ 事件：
+   和页面交互的行为称之为事件。比如：鼠标点击某个按钮时(onclick)、鼠标浮动或离开
+   到某个区域时（onmouseover、onmouseout）、文本框获取焦点和失去焦点时
+(onfocus、onblur)等。
+*/
+
+  //写在window.onload里的方法在页面加载完成以后执行
+  window.onload = function() {
+    var oBtn = document.getElementById("btn");
+    alert(oBtn);
+
+    //给按钮添加事件驱动函数
+    //该函数在按钮被点击以后触发
+    oBtn.onclick() = function() {
+      alert("点击");
+    }
+  }
+</script>
+
+<body>
+  <input type="button" name="btn" id="btn" value="按钮" />
+</body>
+
+<script type="text/javascript">
+  //【注】这种写法一般不用，一般情况下，我们的script标签写在head标签中。
+  // var oBtn = document.getElementById();
+  // alert(oBtn);
+</script>
+
+</html>

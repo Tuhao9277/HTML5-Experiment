@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    
+    /*
+    history是window对象的属性，他保存这个用户的上网记录
+    history.length
+    返回当前history对象中的记录数
+
+    history.back(); //返回上一条历史记录，类似于后退
+    history.forword(); //前进道下一条历史记录，类似于前进
+
+    history.go(param);
+            参数： 正数：向前跳跃指定大小的页面数
+                    负数：向后退制定大小的页面数
+                    0：刷新
+
+
+    */
+    
+    window.onload = function(){
+        var oBtn = document.getElementById("btn");
+        var oForward = document.getElementById("forward");
+        var oBack = document.getElementById("back");
+        var oGo = document.getElementById("go");
+        oBtn.onclick = function(){
+            alert(history.length);
+        }
+        oForward.onclick =  function(){
+           history.forward();
+        }
+        oBack.onclick = function(){
+            history.back();
+        }
+        oGo.onclick = function(){
+            history.go();
+        }
+        
+    }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="记录" id="btn">
+    <input type="button" value="前进" id="forward">
+    <input type="button" value="后退" id="back">
+    <input type="button" value="go" id="go">
+</body>
+</html>
