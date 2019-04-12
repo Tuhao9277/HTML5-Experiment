@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        var a = [1, 2, 3, 4];
+        var b = new Array();
+        var c = [];
+        console.log(a[100]) //undefined
+        console.log(a[-2]) //undefined
+        for (let i = 1; i <= 100; i++) {
+            if (i % 3 == 0)
+                c[c.length] = i;
+        }
+        console.log(a);
+
+        for (let index = 0; index < a.length; index++) {
+            console.log(a[i])
+        }
+        var b = [];
+        for (let i = 0; i < 100; i++) {
+            if(i%2 ==0)
+                a.push(i);
+            b.unshift(i); //
+            
+            
+        }
+
+        // 调用任何一个函数的时候，如果在前面加上new关键字，则函数变为构造函数，会自动返回一个对象
+        // function fn(){
+        // }
+        // var c = new fn();
+        // typeof(c) // object
+        // var c = fn();
+        // console.log(c) //undefined
+    </script>
+</body>
+
+</html>

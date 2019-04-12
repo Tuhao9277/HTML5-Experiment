@@ -33,17 +33,30 @@
 			array --> 当前数组
 		});
 		功能：遍历数组
+		注意：forEach()不会有返回值
 		*/
+		arr.forEach()
+		arr.map()
 		var arr = [10, 20, 30];
 		arr.forEach(function(item, index, array) {
 
 			alert(item, +" " + index + "," + array);
 			// 10 0 10 20 30
 		})
-		arr.forEach(alert); //同样依次遍历
+		arr.forEach(alert); //同样依次遍历,只接收item参数
 
 		/* 
 			map 映射 先遍历->操作->返回
+			映射：一边遍历，一边生成一个新数组，一一对应
+
+			格式：
+			数组.map(function(item,index,array){
+			item --> 当前遍历到的元素
+			index --> 当前遍历到的下标
+			array --> 当前数组
+			注意：map的返回值为调用它数组的映射，具体操作在function中。
+			不改变原来的数组。
+		});
 		*/
 		var arr2 = [20, 30, 40];
 		var newArr = arr.map(function(item, index, array) {
@@ -52,7 +65,7 @@
 		alert(newArr); // 22 32 42
 
 		/*
-			reduce 归并
+			reduce 归并。数组前后元素运算
 		*/
 		var arr3 = [10, 20, 30];
 		var res = arr3.reduce(function(pre, next, index, array) {
@@ -64,7 +77,9 @@
 		})
 		alert(res); //10+20+30 = 60
 		/*
-		filter过滤
+		filter过滤	返回 
+		return 0; 全过滤
+		return 1; 不过滤
 	   */
 		var arr4 = [10, 20, 30, 40, 50].filter(function(item, index, array) {
 			return item > 30; //所有大于30的元素
@@ -89,6 +104,17 @@
 	   	return item > 30; //数组中有无30
 	   })
 	   	alert(arr6);
+		/*
+			find	
+		*/
+		   var arr7= [10,20,30,40];
+		   arr7.find();
+		/*
+			splice(startIndex,count);
+		*/
+		   var arr8= [10,20,30,40];
+		   arr8.splice(0,1);
+		   
 	</script>
 	<body>
 	</body>
