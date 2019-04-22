@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>修改字符串为驼峰命名</title>
+</head>
+<body>
+    <script>
+        function camelBack (arr){
+            // 将字符串拆分成数组
+            var str = arr.split('-');
+            // 保存修改后数组首元素（首个字符串）
+            newStr = str[0];
+            
+            for (var i = 1; i < str.length; i++) {
+                // 首个字符串不变，第二个开始，首元素的首字母取出来改大写
+                // 在拼上字符串剩余的部分。
+                newStr +=str[i].charAt(0).toUpperCase()
+                        + str[i].substr(1);
+            }
+            return newStr;
+        }
+        var res = camelBack('new-upper-case');
+        document.write(res);
+    </script>
+</body>
+</html>
