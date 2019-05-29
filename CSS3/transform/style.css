@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background: #f00;
+    /* transform: translateX(100px); */
+    /* transform: rotate(45deg); */
+    -webkit-transform: translate(100px, 100px) rotate(45deg);
+    transform: translate(100px, 100px) rotate(45deg);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.box>span {
+    display: block;
+    font-size: 100px;
+    /* transform: rotate(135deg); */
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}

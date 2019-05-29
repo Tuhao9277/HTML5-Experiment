@@ -2,15 +2,73 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Ol</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+		}
+		.container{
+			height: 100%;
+			background: #ff0;
+			display: flex;
+			flex-direction: column;
+		}
+		 header{
+			height: 44px;
+			background: #0923;
+		}
+		footer{
+			height: 44px;
+			background: #0923;
+		}
+
+		.container main{
+			background: gray;	
+			flex: 1;
+		}
+		.container nav {
+			height: 44px;
+			display: flex;
+			background: #e2053e;
+		}
+		.container nav  a{
+			height: 44px;
+			text-align: center;
+			line-height: 44px;
+			width: 100%;
+			flex: 1;
+			background: #e2053e;
+		}
+	</style>
 </head>
 <body>
-	<ol start="6" reversed="reversed">
-		<li>HTTP</li>
-		<li>HTTP</li>
-		<li>HTTP</li>
-		<li>HTTP</li>
-		<li>JavaScript</li>
-	</ol>
+		<header>
+				首页
+			</header>
+	<div class="container">	
+		
+		<main>
+			<input type="text" id="text" list="cars" />
+			<datalist id="cars">
+				<option value="BTV">北京国安电视台</option>
+				<option value="LNTV">鲁能电视台</option>
+				<option value="HTV">恒大电视台</option>
+			</datalist>
+		</main>
+		<nav>
+			<a href="#">首页</a>
+			<a href="#">搜索</a>
+			<a href="#">我的</a>
+		</nav>
+	</div>
+	<footer>
+		底部
+	</footer>
 </body>
 </html>

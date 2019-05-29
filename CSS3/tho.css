@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a {
+
+    -webkit-text-decoration-line: none;
+
+    text-decoration-line: none;
+    -moz-text-decoration-line: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.box {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.box header {
+    height: 44px;
+    background: #ff852a;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+}
+
+.box main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    overflow-y: scroll;
+}
+
+.box nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 44px;
+    border-top: 1px solid #ccc;
+}
+
+.box nav a {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.box b {
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.banner {
+    height: 120px;
+    background: #db1050;
+}
+
+main ul {
+    height: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+main ul li {
+    width: 20%;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+
+}
+main .content{
+    height: 500px;
+    background: #ccc;
+}

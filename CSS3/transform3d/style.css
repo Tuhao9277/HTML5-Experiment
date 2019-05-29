@@ -1,0 +1,10 @@
+@media(max-width:600px){
+    span{
+        display: block;
+    }
+}
+@font-face{
+    font-family: myFirsrFont;
+    src: url("Sansation_Light.ttf");
+    font-weight: bold;
+}
