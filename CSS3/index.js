@@ -11,9 +11,13 @@ let a ={
     
     sCallback : function callback(data){
        
-    }
+   }
 }
 let b ;
-
-let d= _.cloneDeep(a);
-console.log(d);
+// let d= _.cloneDeep(a);
+// console.log(d);
+const arr5 = [1,5,87,45,8,88];
+let res = arr5.reduce((pre,cur)=>{
+    return pre+cur;
+},0);
+console.log(res);

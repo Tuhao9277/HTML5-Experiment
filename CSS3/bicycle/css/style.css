@@ -1,0 +1,227 @@
+html,
+body {
+    height: 100%;
+}
+
+.content-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.sun {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ff9944;
+    box-shadow: 0 0 50px rgba(255, 163, 68, .7);
+    position: absolute;
+    right: 620px;
+    top: 270px;
+}
+
+.hill {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 250px;
+    border-top-right-radius: 160%;
+    border-top-left-radius: 100%;
+    background-color: #adde60;
+    z-index: -1;
+}
+
+.hill::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: #93cc3a;
+    height: 110%;
+    transform: rotate(4deg);
+    border-top-right-radius: 100%;
+    bottom: -70px;
+    left: -54px;
+    z-index: 1;
+}
+
+.hill::after {
+    position: absolute;
+    content: '';
+    width: 120%;
+    background-color: #75b60d;
+    height: 100%;
+    transform: rotate(4deg);
+    border-top-left-radius: 100%;
+    bottom: -100px;
+    right: -400px;
+    box-shadow: 0 0 25px #cbf191 inset;
+    z-index: 2;
+}
+
+.grass {
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    background-color: #d2beb5;
+    bottom: 60px;
+}
+
+.grass::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 8px;
+    left: 0;
+    top: -4px;
+    background-color: #0aa;
+    background: linear-gradient(135deg, transparent 25%, #0aa 25%);
+    background-size: 10px 10px;
+}
+
+.grass::before {
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 8px;
+    left: 0;
+    top: 14px;
+    background: #b99f93;
+}
+
+.street {
+    width: 102%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    background-color: #777675;
+}
+
+.street::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    bottom: 5px;
+    background-color: #d2beb5;
+}
+
+.street-line {
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    background-color: #d4d4d4;
+    box-shadow: 200px 0 0 #d4d4d4, 400px 0 0 #d4d4d4, 600px 0 0 #d4d4d4,
+        800px 0 0 #d4d4d4, 1000px 0 0 #d4d4d4, 1200px 0 0 #d4d4d4;
+    ;
+    ;
+}
+
+.car {
+    position: absolute;
+    top: -35%;
+    left: 500px;
+}
+
+.car-body {
+    width: 120px;
+    position: relative;
+    height: 0;
+    top: 10px;
+    border-bottom: 24px solid #d1352b;
+}
+
+.car-body::before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    width: 30px;
+    height: 24px;
+    background: #d1352b;
+    border-top-right-radius: 4px;
+    z-index: 1;
+}
+
+.car-top-back {
+    position: absolute;
+    width: 58px;
+    height: 20px;
+    border-radius: 5px 0 0 0;
+    top: -20px;
+    left: 4px;
+    background: #4e4e4e;
+}
+
+.car-top-back::before {
+    content: '';
+    background: #736f6f;
+    position: absolute;
+    width: 38px;
+    top: 4px;
+    right: 6px;
+    height: 14px;
+    border-radius: 0 0 2px 2px;
+}
+
+.back-curve {
+    width: 5px;
+    height: 20px;
+    position: absolute;
+    left: -3px;
+    border-radius: 960% 100% 0 0;
+    top: 1px;
+    background: none repeat scroll 0 0 #4C4B4B;
+    transform: rotate(6deg);
+}
+.car-top-front{
+    position: absolute;
+    top: -20px;
+    left: 60px;
+    width: 20px;
+    height: 20px;
+    background: #dc4630;
+    border-radius: 0 0 2px 8px #892924;
+}
+.car-top-front::after{
+    position: absolute;
+    content: '';
+    width: 26px;
+    height: 20px;
+    top: 0;
+    left: 6px;
+    border-radius: 4px 0 4px 4px;
+    background: #dc4630;
+}
+.car-gate{
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    left: 48px;
+    background: #d1352b;
+    border: 1px solid #4C4B4B;
+    border-radius: 0 0 2px 8px ;
+}
+.car-gate::before{
+    content: '';
+    width: 10px;
+    height: 2px;
+    top: 2px;
+    left: 4px;
+    position: absolute;
+    background: #4c4b4b;
+    
+}
+.wind-sheild{
+    content: '';
+    background: #f5e7e7;
+    position: absolute;
+    width: 18px;
+    top: 4px;
+    right: -3px;
+    height: 14px;
+    z-index: 3;
+    border-radius: 0  3px 0 0;
+}

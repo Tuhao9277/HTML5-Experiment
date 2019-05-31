@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>Local Storage</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="padding: 0 25px">
+            <div class="page-header">
+                <h1 id="buttons">localStorage</h1>
+            </div>
+            <div class="row">
+            <div class="col-md-6"> 
+                <dl id="storage-data" class="dl-horizontal">
+                    <div class='alert alert-warning'> 还没有设置存储数据！</div>
+                </dl>
+            </div>
+            <form id="set-form" class="col-md-6">
+                <div class="form-group">
+                    <label>姓名</label>
+                    <input type="text" class="form-control" id="nickname" name="name" placeholder="输入您的姓名">
+                </div>
+                <div class="form-group">
+                    <label>性别</label>
+                    <input type="text" class="form-control" id="sex" name="gender" placeholder="输入您的性别">
+                </div>
+                <button id="clear-storage" class="btn btn-danger">清除数据项目</button>
+                <button type="button" id="set-storage" class="btn btn-primary">设置数据项目</button>
+            </form>
+            </div>
+        </div>
+    </div>
+</body>
+    <script src="webStorage.js"></script>    
+    <script>
+        let myStorage = WebStorage.getInstance();
+        let nickname = document.getElementById("nickname");
+        let sex = document.getElementById("sex");
+        var setS = document.getElementById("set-storage");
+        setS.addEventListener("click",()=>{
+            myStorage.setStorage("name",nickname.value); 
+            myStorage.setStorage("sex",sex.value); 
+        })
+        var clearS = document.getElementById("clear-storage");
+        clearS.addEventListener("click",()=>{
+            myStorage.removeAllStorage();
+        })
+
+    </script>
+</html>
